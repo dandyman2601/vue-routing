@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Home view</h1>
+    <router-view id="router_comp"></router-view>
+    <ul>
+      <li><router-link :to="{name: 'yellow'}">go to yellow</router-link></li>
+      <li><router-link :to="{name: 'red'}">go to red</router-link></li>
+      <li><router-link :to="{name: 'green'}">go to green</router-link></li>
+      <li><router-link :to="{name: 'black'}">go to black</router-link></li>
+      <li><router-link :to="{name: 'blue'}">go to blue</router-link></li>
+    </ul>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+export default {  
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  h1{
+    color: black;
+    background-color: white;
+  }
+ 
 </style>
