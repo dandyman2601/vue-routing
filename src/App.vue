@@ -9,11 +9,42 @@
       <li><router-link :to="{name: 'black'}">go to black</router-link></li>
       <li><router-link :to="{name: 'blue'}">go to blue</router-link></li>
     </ul>
+    <hr>
+    
+    <h1>Enter Pin Code that looks up Postal code india API</h1>
+    <Postal :pin_code="pin_code" :postofficedata="postofficedata" @getPostOfficeData="getResult"></Postal>
+    <h3>
+      {{ result }}
+    </h3>
+
   </div>
+
+  
 </template>
 
 <script>
-export default {  
+// import axios from 'axios'
+//Need to fix mutating prop 
+import Postal from './components/Postal.vue'
+
+export default {
+   data() {
+    return {
+      pin_code: "",
+      postofficedata: "",
+      result: "",
+    };
+  },
+  methods: {  
+    getResult(data){
+      this.result = data
+      console.log("This is the result: "+ data)
+    }
+  },
+  components: {
+    Postal
+  }
+
 }
 </script>
 

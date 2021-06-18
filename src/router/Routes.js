@@ -3,6 +3,7 @@ import Blue from '../components/Blue.vue'
 import Green from '../components/Green.vue'
 import Red from '../components/Red.vue'
 import Yellow from '../components/Yellow.vue'
+import Postal from '../components/Postal.vue'
 
 const routes = [
 
@@ -29,7 +30,13 @@ const routes = [
         path: '/red',
         component: Red,
         name:'red'
+    },
+    {   
+        path: '/postal',
+        component: Postal,
+        name:'postal'
     }
+    
 ]
 
 export default routes;
