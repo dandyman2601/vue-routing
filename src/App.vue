@@ -12,7 +12,8 @@
     <hr>
     
     <h1>Enter Pin Code that looks up Postal code india API</h1>
-    <Postal :pin_code="pin_code" :postofficedata="postofficedata" @getPostOfficeData="getResult"></Postal>
+    <Postal @getPostOfficeData="getResult"></Postal>
+    
     <h3>
       {{ result }}
     </h3>
@@ -30,8 +31,8 @@ import Postal from './components/Postal.vue'
 export default {
    data() {
     return {
-      pin_code: "",
-      postofficedata: "",
+      //pin_code: "",
+      //postofficedata: "",
       result: "",
     };
   },

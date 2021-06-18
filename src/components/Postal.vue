@@ -1,6 +1,6 @@
 <template>
   <div class="postoffice">
-        <input type="number" name="pin_code" id="pin_code" v-model="pin_code" />
+        <input type="number" name="pin_code" id="pin_code" v-model="pin_code"/>
         <button type="submit" @click="getPostOfficeData()">Submit</button>        
   </div>
 </template>
@@ -8,11 +8,12 @@
 <script>
 import axios from 'axios'
 export default {
-    props: ['pin_code','postofficedata'],
-
+    //props: ['postofficedata'], 
+  //the mutation of the pin_code, postofficedata prop was happening because you shouldn't define a prop within the very same component from which im defining it in
+  //props should be used when transferring data between parent-child, but since it was all within child itself, there was no need for props
     data(){
         return{
-            
+        pin_code: "",  //needed to initialize here in data too
         }
     },
     methods: {
